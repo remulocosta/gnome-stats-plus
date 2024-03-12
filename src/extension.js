@@ -180,7 +180,7 @@ const HorizontalGraph = class StatsPlusHorizontalGraph {
     _updateMax() {
         let max = 0;
         this.renderStats.forEach(k => {
-            max = this.stats[k].max;
+            max = Math.max(max, this.stats[k].max);
         });
 
         if (max < this.max) {
