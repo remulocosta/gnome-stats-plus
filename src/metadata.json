@@ -6,10 +6,10 @@
   "name": "SystemStatsPlus",
   "original-author": "joe@thrallingpenguin.com",
   "shell-version": [
-    "45"
+    "46"
   ],
   "url": "https://github.com/remulocosta/system-stats-plus",
   "uuid": "system-stats-plus@remulo.costa.gmail.com",
-  "version-name": "0.1.0",
-  "version": 2
+  "version-name": "0.2.0",
+  "version": 3
 }
