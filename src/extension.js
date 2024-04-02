@@ -64,7 +64,7 @@ const GraphOverlay = class StatsPlusGraphOverlay {
             reactive: true,
         });
 
-        this.actor.add_actor(this.label);
+        this.actor.add_child(this.label);
         Main.layoutManager.addChrome(this.actor);
         this.actor.hide();
     }
@@ -120,7 +120,7 @@ const HorizontalGraph = class StatsPlusHorizontalGraph {
             style_class: 'ssp-graph-area',
             reactive: true,
         });
-        this.actor.add_actor(this.graph);
+        this.actor.add_child(this.graph);
         this.actor.connect('style-changed', this._updateStyles.bind(this));
 
         this.graphoverlay = new GraphOverlay();
@@ -454,7 +454,7 @@ const Indicator = class StatsPlusIndicator {
             reactive: true,
             track_hover: true,
         });
-        this.actor.add_actor(this.drawing_area);
+        this.actor.add_child(this.drawing_area);
         this.actor.connect(
             'notify::visible',
             this._onVisibilityChanged.bind(this)
@@ -1460,7 +1460,7 @@ const SystemStatsPlus = class StatsPlusExtension {
             indicator.actor.connect('notify::hover', () => {
                 this._onHover(indicator);
             });
-            this._box.add_actor(indicator.actor);
+            this._box.add_child(indicator.actor);
             this._indicators.push(indicator);
         }
 
